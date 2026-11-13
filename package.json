@@ -1,0 +1,27 @@
+{
+  "name": "shelfpulse-ai",
+  "version": "1.0.0",
+  "description": "ShelfPulse AI: Smart Restock & Expiry Tracker for Local Supermarkets (Hyperlocal Commerce)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm.cmd --prefix server install && npm.cmd --prefix client install",
+    "dev:server": "npm.cmd --prefix server run dev",
+    "dev:client": "npm.cmd --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm.cmd --prefix server run dev\" \"npm.cmd --prefix client run dev\"",
+    "migrate": "node server/scripts/migrate.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "hyperlocal",
+    "supermarket",
+    "inventory",
+    "expiry-tracker",
+    "gemini-vision",
+    "whatsapp-restock",
+    "supabase"
+  ],
+  "author": "ShelfPulse AI Team",
+  "license": "MIT"
+}
